@@ -1,0 +1,125 @@
+/* Base styles for the custom card */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--card-border-color, #ccc);
+    border-radius: var(--card-border-radius, 10px);
+    transition: box-shadow 0.3s ease;
+    padding: 15px;
+    text-align: center; /* Default text alignment */
+}
+
+/* Neon border effect on hover */
+.custom-card:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+/* Image container styles */
+.custom-card .card-image {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px; /* Space between image and content */
+    text-align: center; /* Default alignment for the image */
+    vertical-align: var(--image-vertical-align, top); /* Control for vertical alignment */
+}
+
+/* Image styles */
+.custom-card .card-image img {
+    width: var(--image-width, 100%); /* Default width */
+    height: var(--image-height, auto); /* Default height */
+    border-radius: var(--image-border-radius, 0); /* Control for border radius */
+    transition: transform 0.3s ease, filter 0.3s ease, border-radius 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Image hover effects */
+.custom-card .card-image img:hover {
+    transform: var(--image-hover-transform, scale(1)); /* Default transform effect */
+    filter: var(--image-hover-filter, none); /* Default filter effect */
+}
+
+/* Content styles */
+.custom-card .card-content {
+    padding: 10px;
+    position: relative;
+}
+
+/* Title styles */
+.custom-card .card-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
+    text-align: var(--title-alignment, center); /* Control for title alignment */
+}
+
+/* Description styles */
+.custom-card .card-description {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1em;
+    text-align: var(--description-alignment, center); /* Control for description alignment */
+}
+
+/* Button wrapper styles */
+.custom-card .card-button-wrapper {
+    margin-top: 15px;
+    text-align: var(--button-alignment, center); /* Control for button alignment */
+}
+
+/* Button styles */
+.custom-card .card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--button-text-color, #fff); /* Default text color */
+    background-color: var(--button-background-color, #0073e6); /* Default button color */
+    text-decoration: none;
+    border-radius: 5px; /* Button border radius */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+.custom-card .card-button:hover {
+    background-color: var(--button-hover-background-color, #005bb5); /* Hover color */
+    color: var(--button-hover-text-color, #fff); /* Hover text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .custom-card {
+        padding: 10px;
+    }
+
+    .custom-card .card-image {
+        margin-bottom: 10px;
+    }
+
+    .custom-card .card-title {
+        font-size: 1.2em;
+    }
+
+    .custom-card .card-description {
+        font-size: 0.9em;
+    }
+
+    .custom-card .card-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Custom properties for Elementor controls */
+:root {
+    --card-border-color: #ccc;
+    --card-border-radius: 10px;
+    --image-width: 100%;
+    --image-height: auto;
+    --image-border-radius: 0;
+    --image-hover-transform: scale(1.1); /* Example hover transform effect */
+    --image-hover-filter: none; /* Example hover filter effect */
+    --title-alignment: center;
+    --description-alignment: center;
+    --button-alignment: center;
+    --button-background-color: #0073e6;
+    --button-text-color: #fff;
+    --button-hover-background-color: #005bb5;
+    --button-hover-text-color: #fff;
+}
