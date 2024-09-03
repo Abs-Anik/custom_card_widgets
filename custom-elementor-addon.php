@@ -17,6 +17,8 @@ define( 'TR_ADDONS_PATH', plugin_dir_path( __FILE__ ) );
 // Enqueue styles and scripts
 function cea_enqueue_scripts() {
     wp_enqueue_style( 'custom-widget-css', plugin_dir_url( __FILE__ ) . 'assets/css/custom-widget.css' );
+    wp_enqueue_style( 'custom-slider-css', plugin_dir_url( __FILE__ ) . 'assets/css/custom-slider.css' );
+    wp_enqueue_style( 'custom-slider-js', plugin_dir_url( __FILE__ ) . 'assets/js/custom-slider.js' );
     wp_enqueue_script( 'custom-widget-js', plugin_dir_url( __FILE__ ) . 'assets/js/custom-widget.js', array('jquery'), '1.0.0', true );
 
 }
@@ -30,5 +32,10 @@ function cea_register_widgets() {
     // Include new interactive pricing table widget
     require_once( __DIR__ . '/widgets/tr-interactive-pricing-table.php' );
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \TR_Interactive_Pricing_Table_Widget() ); // Corrected class name
+
+    require_once(__DIR__ . '/widgets/tr-interactive-gallery.php');
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \TR_Interactive_Gallery_Widget());
+
 }
 add_action( 'elementor/widgets/widgets_registered', 'cea_register_widgets' );
+
