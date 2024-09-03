@@ -123,3 +123,100 @@
     --button-hover-background-color: #005bb5;
     --button-hover-text-color: #fff;
 }
+
+/*
+*Pricing Table
+*/
+
+/* Base styles for the pricing card */
+.TR-pricing-card {
+    /* position: relative; */
+    width: 100%;
+    max-width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px 20px; /* Add top padding for the icon */
+    text-align: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensures rounded corners are applied */
+}
+
+/* Icon/Image styling */
+.TR-pricing-card .TR-pricing-icon {
+    position: absolute; /* Positioning absolute to center on top */
+    top: -30px!important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Style for the image inside the icon */
+.TR-pricing-card .TR-pricing-icon img {
+    width: 100%;
+    height: auto;
+}
+
+/* Plan title styling */
+.TR-pricing-card .TR-pricing-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 60px 0 10px; /* Adjust margin to give space below icon */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Feature list styling */
+.TR-pricing-card .TR-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.TR-pricing-card .TR-pricing-features li {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Dot styling next to features */
+
+/* Button styling */
+.TR-pricing-button {
+    display: inline-block;
+    padding: 12px 30px;
+    color: var(--button-text-color, #ffffff);
+    background-color: var(--button-background-color, #0073e6);
+    border: 2px solid var(--button-border-color, #0073e6);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.TR-pricing-button:hover {
+    background-color: var(--button-hover-background-color, #005bb5);
+    color: var(--button-hover-text-color, #ffffff);
+    border-color: var(--button-hover-border-color, #005bb5);
+    transform: translateY(-5px);
+}
+
+
+@media only screen and (max-width: 767px) {
+    .TR-pricing-card {
+        margin-bottom: 20px!important;
+    }
+}
+
